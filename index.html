@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DenzaiGroup Twitter Feed</title>
   <style>
     body {
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
     }
-    .feed-container {
-      width: 100%;
+
+    .feed-widget {
       max-width: 600px;
-      margin: auto;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .feed-header {
+      background: linear-gradient(135deg, #1DA1F2, #0d8ddb);
+      color: white;
+      padding: 16px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feed-header img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .feed-body {
+      max-height: 700px;
+      overflow-y: auto;
+    }
+
+    /* Optional scrollbar styling */
+    .feed-body::-webkit-scrollbar {
+      width: 8px;
+    }
+    .feed-body::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <div class="feed-container">
-    <!-- Twitter Timeline Embed -->
-    <a class="twitter-timeline"
-       href="https://twitter.com/DenzaiGroup?ref_src=twsrc%5Etfw"
-       data-width="600"
-       data-height="700"
-       data-theme="light"
-       data-chrome="noheader nofooter noborders transparent">
-       Tweets by DenzaiGroup
-    </a>
+  <div class="feed-widget">
+    <div class="feed-header">
+      <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter Logo">
+      DenzaiGroup Tweets
+    </div>
+    <div class="feed-body">
+      <a class="twitter-timeline"
+         href="https://twitter.com/DenzaiGroup"
+         data-width="100%"
+         data-height="700"
+         data-theme="light"
+         data-chrome="noheader nofooter noborders transparent">
+         Tweets by DenzaiGroup
+      </a>
+    </div>
   </div>
 
   <!-- Twitter JS widget -->
